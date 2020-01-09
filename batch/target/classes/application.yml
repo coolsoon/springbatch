@@ -1,0 +1,80 @@
+# SpringBoot 설정파일
+# 공백문자로 하위 계층 표현 (tab 안됨)
+# 콜론(:) 다음에 공백 한칸 반드시 있어야 함
+# 리스트는 대쉬(-) 로 표현
+# 파일구분(여러 설정파일 처럼) '---'
+
+
+# 공통
+spring: 
+    profiles: 
+        active: dev
+
+logging: 
+    config: classpath:logging/logback.xml    
+    
+
+
+             
+---
+
+# spring.profiles.active=dev
+# profile=dev에서는 쿼리 로깅을 위해 first/second 데이터소스로 tomcat-jdbc사용 (url속성으로 지정)
+# spring batch 기본(hikari) pool은 (jdbc-url속성)
+spring: 
+    profiles: dev
+    datasource: 
+        hikari: 
+            jdbc-url: jdbc:mysql://localhost:3306/batch?serverTimezone=Asia/Seoul&autoreconnect=true
+            username: root
+            password: 1q2w3e4r1!
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            validation-query: SELECT 1
+            test-on-borrow: true
+            test-on-return: false
+        first: 
+            url: jdbc:mysql://localhost:3306/adb?serverTimezone=Asia/Seoul&autoreconnect=true
+            username: root
+            password: 1q2w3e4r1!
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            validation-query: SELECT 1
+            test-on-borrow: true
+            test-on-return: false
+        second: 
+            url: jdbc:mysql://localhost:3306/bdb?serverTimezone=Asia/Seoul&autoreconnect=true
+            username: root
+            password: 1q2w3e4r1!
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            validation-query: SELECT 1
+            test-on-borrow: true
+            test-on-return: false                    
+---
+
+# spring.profiles.active=prod
+spring: 
+    profiles: prod
+    datasource: 
+        hikari: 
+            jdbc-url: jdbc:mysql://localhost:3306/batch?serverTimezone=Asia/Seoul&autoreconnect=true
+            username: root
+            password: 1q2w3e4r1!
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            validation-query: SELECT 1
+            test-on-borrow: true
+            test-on-return: false
+        first: 
+            jdbc-url: jdbc:mysql://localhost:3306/adb?serverTimezone=Asia/Seoul&autoreconnect=true
+            username: root
+            password: 1q2w3e4r1!
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            validation-query: SELECT 1
+            test-on-borrow: true
+            test-on-return: false
+        second: 
+            jdbc-url: jdbc:mysql://localhost:3306/bdb?serverTimezone=Asia/Seoul&autoreconnect=true
+            username: root
+            password: 1q2w3e4r1!
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            validation-query: SELECT 1
+            test-on-borrow: true
+            test-on-return: false  

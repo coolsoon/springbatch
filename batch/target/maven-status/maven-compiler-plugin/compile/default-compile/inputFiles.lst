@@ -1,0 +1,17 @@
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\model\dao\first\FirstDao.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\step\process\PeopleItemProcessor.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\step\writer\SimpleWriterConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\job\SimpleJobConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\config\SpringBatchDatabaseConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\job\param\CurrentTimeIncrementer.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\job\listener\SimpleStepExecutionListener.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\step\process\SimpleProcessConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\SpringBatchApplication.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\config\FirstDataSourceConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\job\listener\SimpleJobExecutionListener.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\util\DateUtils.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\job\listener\SimpleChunkListener.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\config\SecondDataSourceConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\step\reader\SimpleReaderConfiguration.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\model\dao\second\SecondDao.java
+D:\workspace\2020\batch\src\main\java\com\euclid\batch\model\vo\People.java
